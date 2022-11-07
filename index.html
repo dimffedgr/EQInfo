@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://lib.baomitu.com/jquery/3.6.0/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/parsing.js" charset="utf-8">
+        </script>
+        <title>EQinfo</title>
+        <link rel="icon" href="icon/favicon.ico" type ="image/x-icon">
+        <style src="css/font.css"></style>
+        <style>
+            body{
+                font-family:OPPOSans-H;
+                font-weight: 200;
+                background-color: rgb(79, 77, 77);
+                text-shadow: 5px 5px 5px rgb(58, 58, 58);
+                color: white;
+            }
+            #data{
+                background-color:rgba(71, 66, 66, 0.923);
+                position:absolute;
+                box-shadow: 3px 3px 3px rgb(55, 52, 52);
+                border-radius: 20px;
+            }
+            #Area,#Mag,#time,#depth{
+                color: white;
+                position:relative;
+                text-align: center;
+                float: left;
+                margin: 10px;
+                font-size: larger;
+            }
+            #Mag{
+                font-size: larger;
+                text-align: left;
+            }
+            #type{
+                color: white;
+                position:relative;
+                text-align: left;
+                margin: 5px;
+            }
+            #Maxint{
+                color: white;
+                position:relative;
+                float: left;
+                text-align:center;
+                font-size: larger;
+                margin: 5px;
+            }
+            /*
+                JMA
+            */
+            #JMA_data{
+                background-color:rgba(71, 66, 66, 0.923);
+                position:absolute;
+                box-shadow: 3px 3px 3px rgb(55, 52, 52);
+                border-radius: 20px;
+            }
+            #JMAArea,#JMAMag,#JMAtime{
+                color: white;
+                text-align: center;
+                float: left;
+                margin: 5px;
+                font-size: larger;
+            }
+            #JMAMag{
+                font-size: larger;
+                text-align: left;
+            }
+            #JMAtype{
+                color: white;
+                text-align: left;
+                margin: 5px;
+            }
+            #JMAMaxint{
+                color: white;
+                float: left;
+                text-align:left;
+                font-size: larger;
+                margin: 5px;
+            }
+            #JMAdepth{
+                position:absolute;
+                color: white;
+                float: left;
+                margin-top: 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+                font-size: larger;
+            }
+            #JMAtime{
+                margin-top: 20px;
+            }
+            #time{
+                margin-top: 10px;
+            }
+            /*
+            Beibei
+            */
+            #beibei{
+                background-color:rgba(71, 66, 66, 0.923);
+                position:absolute;
+                box-shadow: 3px 3px 3px rgb(55, 52, 52);
+                border-radius: 20px;
+            }
+            p{
+                font-size: larger;
+            }
+            a{
+                color: rgb(255, 255, 255);
+            }
+            #systime{
+                display: inline-block;
+            }
+            #datetime{
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="data">
+            <p id="type">loading</p>
+            <hr>
+            <p id="Area">Please Wait</p>
+            <p id="Mag"></p>
+            <br>
+            <p id="Maxint"></p>
+            <br>
+            <p id="depth"></p>
+            <br>
+            <p id="time"></p>
+            <p id="refresh_time"></p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <div id="JMA_data">
+            <p id="type">[<em>JMA</em>发报]</p>
+            <hr>
+            <p id="JMAArea">Please Wait</p>
+            <p id="JMAMag"></p>
+            <br>
+            <br>
+            <p id="JMAMaxint"></p>
+            <br>
+            <br>
+            <p id="JMAdepth"></p>
+            <br>
+            <p id="JMAtime"></p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <div id="beibei">
+            <p>北碚区实时震度数据(cm/s²)</p>
+            <hr>
+            <p id="bbnow">Loading</p>
+            <p id="bb5mmax">Please Wait</p>
+            <a href="noceil.html">我不要四舍五入(￣▽￣)</a>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <p id="cat"></p>
+        <p id="systime">系统时间:</p>
+        <p id="datetime">
+            <script>
+                setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);
+            </script>
+        </p>
+        <br>
+        <a href="about.html">关于</a>
+    </body>
+</html>
